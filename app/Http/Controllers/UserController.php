@@ -18,6 +18,14 @@ class UserController extends Controller
         return view("users.index", ["users" => $users]);
     }
 
+    public function login($id) {
+        $token = substr(md5(mt_rand()), 0, 32);
+        $user = User::find($id);
+        $user->admin_login_token = $token;
+        $user->save();
+        return \Redirect::to("https://id.trutienhonthe.com/dang-nhap?token=" . $token);
+    }
+
     public function edit($id)
     {
         $deposits = Deposit::where("user_id", $id)->latest()->get();

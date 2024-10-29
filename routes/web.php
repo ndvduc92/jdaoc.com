@@ -43,6 +43,7 @@ Route::group(["middleware" => "auth"], function () {
 	Route::group(["prefix" => "users"], function () {
 		Route::get('/', [UserController::class, 'index'])->name("users");
 		Route::get('/{id}/edit', [UserController::class, 'edit']);
+		Route::get('/{id}/login', [UserController::class, 'login']);
 		Route::post('/{id}/edit', [UserController::class, 'update']);
 	});
 
