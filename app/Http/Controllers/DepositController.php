@@ -12,7 +12,7 @@ class DepositController extends Controller
 {
     public function index()
     {
-        $deposits = Deposit::latest()->get();
+        $deposits = Deposit::with("processing_by")->latest()->get();
 
         if (request()->id) {
             $deposits = Deposit::where("user_id", request()->id)->where("display", "on")->latest()->get();

@@ -41,7 +41,7 @@
                                     class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 ">
-                                <input readonly class="form-control" value="{{ $user->email }}">
+                                <input class="form-control" value="{{ $user->email2 }}">
                             </div>
                         </div>
                         <div class="item form-group">
@@ -71,7 +71,7 @@
                         <div class="item form-group">
                             <label class="col-form-label col-md-3 col-sm-3 label-align">Số dư (xu)</label>
                             <div class="col-md-6 col-sm-6 ">
-                                <input name="balance" class="form-control" value="{{ $user->balance }}">
+                                <input readonly name="balance" class="form-control" value="{{ $user->balance }}">
                             </div>
                         </div>
                         <div class="item form-group">

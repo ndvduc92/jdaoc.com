@@ -36,11 +36,11 @@
           <div class="row">
             <div class="col-sm-12">
               <div class="card-box table-responsive">
-                <table class="table" id="datatable-buttons">
+                <table class="table table-striped table-bordered dataTable no-footer dtr-inline" id="datatable-buttons">
                   <thead>
                     <tr>
-                      <th>#</th>
                       <th>Hình thức</th>
+                      <th>Admin xử lý</th>
                       <th>Tài khoản</th>
                       <th>Giá tiền gốc</th>
                       <th>Giá tiền (KM)</th>
@@ -51,8 +51,8 @@
                   <tbody>
                     @foreach ($deposits as $item)
                     <tr>
-                      <th>{{ $loop->index + 1}}</th>
                       <td>{{ \App\Models\Deposit::TYPES[$item->type] }}</td>
+                      <td>{{$item->processing_by->name}}</td>
                       <td>{{$item->user->username}}</td>
                       <td>{{number_format($item->amount)}}</td>
                       <td>{{number_format($item->amount_promotion)}}</td>

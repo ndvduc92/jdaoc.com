@@ -57,8 +57,8 @@ Route::group(["middleware" => "auth"], function () {
 
 	Route::group(["prefix" => "promotions"], function () {
 		Route::get('/', [PromotionController::class, 'index']);
-		Route::get('/add', [PromotionController::class, 'create']);
-		Route::post('/add', [PromotionController::class, 'store']);
+		Route::get('/{id}/edit', [PromotionController::class, 'edit']);
+		Route::post('/{id}/edit', [PromotionController::class, 'update']);
 	});
 
 	Route::group(["prefix" => "giftcodes"], function () {

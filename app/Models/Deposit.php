@@ -18,11 +18,8 @@ class Deposit extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function process_user() {
-        return $this->belongsTo(User::class, "processing_user", "id");
-    }
 
     public function processing_by() {
-        return $this->belongsTo(User::class, 'processing_user', 'id');
+        return $this->belongsTo(User::class, 'processing_user', 'id')->withDefault(["user" => ""]);
     }
 }

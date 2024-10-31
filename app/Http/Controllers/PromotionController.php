@@ -22,12 +22,12 @@ class PromotionController extends Controller
         return view("promotions.index", ["promotions" => $promotions]);
     }
 
-    public function create()
+    public function edit($id)
     {
-        return view("promotions.add");
+        return view("promotions.edit", ["promotion" => Promotion::find($id)]);
     }
 
-    public function store(Request $request)
+    public function update(Request $request, $id)
     {
         $validated = $request->validate([
             'start_time' => 'bail|required|date',
@@ -35,7 +35,7 @@ class PromotionController extends Controller
             "amount" => 'bail|required',
         ]);
 
-        $item = new Promotion;
+        $item = Promotion::find($id);
         $item->start_time = $request->start_time;
         $item->end_time = $request->end_time;
         $item->type = $request->type;

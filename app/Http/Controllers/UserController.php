@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Char;
-use App\Models\User;
 use App\Models\Deposit;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -18,7 +18,8 @@ class UserController extends Controller
         return view("users.index", ["users" => $users]);
     }
 
-    public function login($id) {
+    public function login($id)
+    {
         $token = substr(md5(mt_rand()), 0, 32);
         $user = User::find($id);
         $user->admin_login_token = $token;
@@ -40,11 +41,11 @@ class UserController extends Controller
     {
         $validated = $request->validate([
             'phone' => 'bail',
-            'balance' => 'bail|required'
+            'balance' => 'bail|required',
         ]);
         $user = User::find($id);
         $user->phone = $request->phone;
-        $user->balance = $request->balance;
+        $user->email = $request->email;
         $user->balance_free = $request->balance_free;
         $user->rank = $request->rank;
         $user->save();
@@ -54,14 +55,13 @@ class UserController extends Controller
     public function updateName(Request $request, $id)
     {
         $validated = $request->validate([
-            'name2' => 'bail|required'
+            'name2' => 'bail|required',
         ]);
         $char = Char::find($id);
         $char->name2 = $request->name2;
         $char->save();
         return back();
     }
-    
 
     public function deleteChar($id)
     {
@@ -81,8 +81,8 @@ class UserController extends Controller
         return view("chars.index", ["chars" => $chars]);
     }
 
-
-    private function specialChars($str) {
+    private function specialChars($str)
+    {
         return preg_match('/[^a-zA-Z0-9\.]/', $str) > 0;
     }
 }

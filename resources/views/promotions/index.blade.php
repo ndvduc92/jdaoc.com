@@ -12,14 +12,7 @@
     <div class="row">
         <div class="col-md-12 col-sm-12 ">
             <div class="x_panel">
-                <div class="x_title">
-                    <a href="/promotions/add" class="nav navbar-right panel_toolbox">
-                      <li>
-                        <button href="/promotions/add" role="" class="btn btn-success">Thêm Mới</button>
-                      </li>
-                    </a>
-                    <div class="clearfix"></div>
-                  </div>
+                
                 <div class="x_content">
                     <div class="row">
                         <div class="col-sm-12">
@@ -37,7 +30,7 @@
                                     <tbody>
                                         @foreach ($promotions as $item)
                                         <tr>
-                                            <th>{{ $loop->index + 1}}</th>
+                                            <th><a class="btn btn-sm btn-danger" href="/promotions/{{ $item->id }}/edit">Sửa</a></th>
                                             <th>{{\Carbon\Carbon::parse($item->start_time)->format("d/m/Y")}}</th>
                                             <td>{{\Carbon\Carbon::parse($item->end_time)->format("d/m/Y")}}</td>
                                             <td>{{$item->getType()}}</td>
