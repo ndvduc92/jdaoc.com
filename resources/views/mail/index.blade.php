@@ -3,7 +3,7 @@
     <div class="">
         <div class="page-title">
             <div class="title_left">
-                <h3>Thông tin vật phẩm</h3>
+                <h3>Lịch sử vật phẩm</h3>
             </div>
         </div>
 

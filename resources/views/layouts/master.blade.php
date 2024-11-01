@@ -74,10 +74,8 @@
                                 <li><a href="/promotions"><i class="fa fa-send"></i> Khuyến Mãi</a></li>
                                 <li><a href="/posts"><i class="fa fa-edit"></i> Tin tức</a></li>
                                 <li><a href="/wheels"><i class="fa fa-diamond"></i> Vòng quay may mắn</a></li>
-                                <li><a href="/trades"><i class="fa fa-exchange"></i> Game Trading Log</a></li>
+                                <li><a href="/tools"><i class="fa fa-exchange"></i> Game Trading Log</a></li>
 
-                                <li><a href="/items"><i class="fa fa-th-list"></i> Search Item</a></li>
-                                <li><a href="/tools"><i class="fa fa-cog"></i> Công cụ</a></li>
                                 <li><a href="/remote"><i class="fa fa-desktop"></i> Truy cập máy chủ</a></li>
                                 {{-- <li><a href="/guilds"><i class="fa fa-diamond"></i> Bang Hội</a></li> --}}
                             </ul>
@@ -120,41 +118,9 @@
                                 </a>
                                 <div class="dropdown-menu dropdown-usermenu pull-right"
                                     aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="javascript:;"> Profile</a>
-                                    <a class="dropdown-item" href="javascript:;">Help</a>
                                     <a class="dropdown-item" href="/logout"><i class="fa fa-sign-out pull-right"></i>
                                         Thoát</a>
                                 </div>
-                            </li>
-
-                            <li role="presentation" class="nav-item dropdown open">
-                                <a href="javascript:;" class="dropdown-toggle info-number" id="navbarDropdown1"
-                                    data-toggle="dropdown" aria-expanded="false">
-                                    <i class="fa fa-bell"></i>
-                                    <span class="badge bg-red">0</span>
-                                </a>
-                                <ul class="dropdown-menu list-unstyled msg_list" role="menu"
-                                    aria-labelledby="navbarDropdown1">
-                                    <li class="nav-item">
-                                        <a class="dropdown-item">
-                                            <span>
-                                                <span>{{ Auth::user()->username }}</span>
-                                                <span class="time">3 mins ago</span>
-                                            </span>
-                                            <span class="message">
-                                                Tài khoản xxx đã nạp xxx tiền...
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <div class="text-center">
-                                            <a class="dropdown-item">
-                                                <strong>See All Alerts</strong>
-                                                <i class="fa fa-angle-right"></i>
-                                            </a>
-                                        </div>
-                                    </li>
-                                </ul>
                             </li>
                         </ul>
                     </nav>

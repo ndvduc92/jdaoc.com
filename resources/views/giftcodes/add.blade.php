@@ -39,16 +39,15 @@
                             <div class="col-md-6 col-sm-6 ">
                                 <select class="form-control" name="type">
                                     @foreach (\App\Models\Giftcode::TYPES as $key => $value)
-                                        <option
-                                            value="{{ $key }}" 
-                                        >{{ $value }}</option>
+                                    <option value="{{ $key }}">{{ $value }}</option>
                                     @endforeach
 
                                 </select>
                             </div>
                         </div>
                         <div class="item form-group">
-                            <label class="col-form-label col-md-3 col-sm-3 label-align">Cấp VIP (bỏ qua nếu không phải VIP)</label>
+                            <label class="col-form-label col-md-3 col-sm-3 label-align">Cấp VIP (bỏ qua nếu không phải
+                                VIP)</label>
                             <div class="col-md-6 col-sm-6 ">
                                 <input type="number" name="viplevel" class="form-control">
                             </div>
@@ -58,15 +57,14 @@
                                     class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 ">
-                                <input name="expired" class="form-control" placeholder="dd-mm-yyyy"
-                                    type="date" required="required">
+                                <input name="expired" class="form-control" placeholder="dd-mm-yyyy" type="date"
+                                    required="required">
                             </div>
                         </div>
                         <div class="ln_solid"></div>
                         <div class="item form-group">
                             <div class="col-md-6 col-sm-6 offset-md-3">
                                 <a href="/giftcodes" class="btn btn-danger" type="button">Huỷ</a>
-                                <button class="btn btn-primary" type="reset">Reset</button>
                                 <button type="submit" class="btn btn-success">Thêm</button>
                             </div>
                         </div>

@@ -45,7 +45,8 @@
                                     class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 ">
-                                <input type="text" name="description" class="form-control" value="{{ $shop->description }}">
+                                <input type="text" name="description" class="form-control"
+                                    value="{{ $shop->description }}">
                             </div>
                         </div>
                         <div class="item form-group">
@@ -72,10 +73,10 @@
                                 <select name="status" id="" class="form-control">
                                     <option value="active" @php if ($shop->status == "active") {
                                         echo "selected";
-                                    } @endphp>Đang bán</option>
+                                        } @endphp>Đang bán</option>
                                     <option value="inactive" @php if ($shop->status == "inactive") {
                                         echo "selected";
-                                    } @endphp>Ngừng bán</option>
+                                        } @endphp>Ngừng bán</option>
                                 </select>
                             </div>
                         </div>

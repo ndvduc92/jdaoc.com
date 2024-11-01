@@ -87,7 +87,7 @@
 
                             <div class="item form-group">
                                 <div class="col-md-6 col-sm-6 offset-md-3">
-                                    <a href="/wheelS" class="btn btn-danger" type="button">Huỷ</a>
+                                    <a href="/wheels" class="btn btn-danger" type="button">Huỷ</a>
                                     <button type="submit" class="btn btn-success">Cập Nhật</button>
                                 </div>
                             </div>
@@ -173,7 +173,7 @@
 
                             <div class="item form-group">
                                 <div class="col-md-6 col-sm-6 offset-md-3">
-                                    <a href="/giftcodes" class="btn btn-danger" type="button">Huỷ</a>
+                                    <a href="/wheels" class="btn btn-danger" type="button">Huỷ</a>
                                     <button type="submit" class="btn btn-success">Cập Nhật</button>
                                 </div>
                             </div>

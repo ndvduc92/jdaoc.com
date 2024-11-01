@@ -54,7 +54,7 @@ class DepositController extends Controller
             $item->processing_time = date("Y-m-d H:i:s");
             $item->processing_user = Auth::user()->id;
             $item->save();
-            return back();
+            return redirect("/deposits");
         } catch (\Throwable $th) {
             throw $th;
         }

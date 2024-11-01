@@ -23,13 +23,12 @@
                                     <thead>
                                         <tr>
                                             <th>Char ID</th>
+                                            <th>Ingame</th>
                                             <th>UserID</th>
                                             <th>Username</th>
-                                            <th>Ingame</th>
                                             <th>Level</th>
                                             <th>Môn phái</th>
                                             <th>Giới tính</th>
-                                            <th></th>
                                         </tr>
                                     </thead>
 
@@ -40,13 +39,12 @@
                                             <th scope="row">
                                                     {{ $item->char_id }}
                                             </th>
+                                            <td>{{ $item->name }}</td>
                                             <td>{{ $item->userid }}</td>
                                             <th><a target="_blank" href="/users/{{$item->user ? $item->user->id : ''}}/edit">{{ $item->user ? $item->user->username : ""}}</a></th>
-                                            <td>{{ $item->name }}</td>
                                             <td>{{ $item->level }}</td>
                                             <td>{{ $item->getClass() }}</td>
                                             <td>{{ $item->gender }}</td>
-                                            <th><a href="/chars/{{$item->id}}/delete"><button>Xóa</button></a></th>
                                         </tr>
                                         @endforeach
 

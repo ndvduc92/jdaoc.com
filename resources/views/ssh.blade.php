@@ -25,10 +25,9 @@
 
                 <div class="bs-example" data-example-id="simple-jumbotron">
                     <div class="" style="padding: 2rem 1rem; color:black; font-size: 16px">
-                        <i class="glyphicon glyphicon-hand-right"></i> Đăng nhập vào server <a href="/ssh" target="_blank">TẠI ĐÂY</a> <br>
                         <i class="glyphicon glyphicon-hand-right"></i> Một số lệnh chính:<br>
                         + Truy cập vào menu, gõ lệnh:
-                        <div class="codeBlock">./menu.sh</div>
+                        <div class="codeBlock">./menu</div>
                         &nbsp&nbsp&nbsp&nbspvà nhấn phím số 2 để bắt đầu chạy Channel 1 với full map và phụ bản (Ngoại trừ Lăng Tiêu Thành và map War chạy riêng)<br>
                         + Lưu ý: Chờ từ 5-10p để server có thể khởi động xong và hiện thông báo chạy thành công.<br>
                         + Nhấn phím số 2 để chạy map Lăng Tiêu Thành và phím 3 để chạy map war Bang Hội. <br>

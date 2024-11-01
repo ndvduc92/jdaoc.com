@@ -49,7 +49,7 @@
                         <textarea name="content" id="editor" cols="30" rows="30"></textarea>
                         <div class="form-group" style="margin-top:50px">
                             <div class="col-md-6 col-sm-6 offset-md-3">
-                                <a href="/giftcodes" class="btn btn-danger" type="button">Huỷ</a>
+                                <a href="/posts" class="btn btn-danger" type="button">Huỷ</a>
                                 <button class="btn btn-primary" type="reset">Reset</button>
                                 <button type="submit" class="btn btn-success">Thêm</button>
                             </div>

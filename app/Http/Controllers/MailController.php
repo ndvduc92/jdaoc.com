@@ -20,7 +20,7 @@ class MailController extends Controller
 {
     public function index()
     {
-        $mails = Mail::with("char", "item")->latest()->get();
+        $mails = Mail::with("char", "char.user", "item", "sender")->latest()->get();
         return view("mail.index", ["mails" => $mails]);
     }
 

@@ -43,7 +43,7 @@
                         <div class="ln_solid"></div>
                         <div class="item form-group">
                             <div class="col-md-6 col-sm-6 offset-md-3">
-                                <a href="/promotions" class="btn btn-danger" type="button">Huỷ</a>
+                                <a href="/deposits" class="btn btn-danger" type="button">Huỷ</a>
                                 <button type="submit" class="btn btn-success">Thêm</button>
                             </div>
                         </div>
